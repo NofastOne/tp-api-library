@@ -13,7 +13,7 @@ export class AuthenticationService {
         }
 
         const token = jwt.sign(
-            {username: user.username}, 
+            {username: user.dataValues.username},
             "your_secret_key",
             { expiresIn: '1h' });
         return token;
